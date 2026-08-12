@@ -1,24 +1,26 @@
-import mongoose from 'mongoose';
-
-const connectionString = process.env.MONGODB_URI || 'mongodb://localhost:27017/octofit_db';
+import { connectDatabase, disconnectDatabase } from '../config/database.js';
 
 /**
- * Seed the octofit_db database with test data
+ * Database seeding script for OctoFit Tracker
+ * 
+ * This script initializes the database with sample data.
+ * Run with: npm run seed
  */
-async function seedDatabase() {
+
+const seedDatabase = async () => {
   try {
-    await mongoose.connect(connectionString);
-
-    console.log('Connected to octofit_db');
-
+    await connectDatabase();
+    
+    console.log('🌱 Seeding database...');
+    
     // TODO: Add seed data for users, teams, activities, leaderboard, and workouts
-
-    console.log('Database seeding complete');
-    await mongoose.disconnect();
+    
+    console.log('✅ Database seeded successfully');
+    await disconnectDatabase();
   } catch (error) {
-    console.error('Error seeding database:', error);
+    console.error('❌ Error seeding database:', error);
     process.exit(1);
   }
-}
+};
 
 seedDatabase();
