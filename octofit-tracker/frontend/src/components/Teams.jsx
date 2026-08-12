@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { fetchFromAPI } from '../api.js';
 
+// API endpoint for teams
+// Codespaces: https://{CODESPACE_NAME}-8000.app.github.dev/api/teams
 const TEAMS_ENDPOINT = '/api/teams';
 
 export default function Teams() {

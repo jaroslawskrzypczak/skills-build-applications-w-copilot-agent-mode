@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { fetchFromAPI } from '../api.js';
 
+// API endpoint for users
+// Codespaces: https://{CODESPACE_NAME}-8000.app.github.dev/api/users
 const USERS_ENDPOINT = '/api/users';
 
 export default function Users() {

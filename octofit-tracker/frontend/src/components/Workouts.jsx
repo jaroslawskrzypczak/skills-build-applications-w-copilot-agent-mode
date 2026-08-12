@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { fetchFromAPI } from '../api.js';
 
+// API endpoint for workouts
+// Codespaces: https://{CODESPACE_NAME}-8000.app.github.dev/api/workouts
 const WORKOUTS_ENDPOINT = '/api/workouts';
 
 export default function Workouts() {
