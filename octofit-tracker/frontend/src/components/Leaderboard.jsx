@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { fetchFromAPI } from '../api.js';
 
+const LEADERBOARD_ENDPOINT = '/api/leaderboard';
+
 export default function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { fetchFromAPI } from '../api.js';
 
+const WORKOUTS_ENDPOINT = '/api/workouts';
+
 export default function Workouts() {
   const [workouts, setWorkouts] = useState([]);
   const [loading, setLoading] = useState(true);

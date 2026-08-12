@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { fetchFromAPI } from '../api.js';
 
+const TEAMS_ENDPOINT = '/api/teams';
+
 export default function Teams() {
   const [teams, setTeams] = useState([]);
   const [loading, setLoading] = useState(true);
